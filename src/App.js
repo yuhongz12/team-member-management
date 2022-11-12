@@ -1,5 +1,7 @@
-import './App.css';
+import React from "react";
 import MemberList from "./member-list";
+import {Link} from "react-router-dom";
+import AddMember from "./add-member";
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
       <h1>Team members</h1>
         <p className={'text-muted'}>You have 3 team members.</p>
 
+        {/*<Link to={AddMember}>Add member</Link>*/}
         <MemberList/>
     </div>
 

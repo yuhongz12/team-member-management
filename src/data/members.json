@@ -1,5 +1,6 @@
 [
   {
+    "_id": 1,
     "firstName" : "Adiren",
     "lastName" : "Oiczak",
     "phoneNumber" : "415-310-1619",
@@ -7,6 +8,7 @@
     "role" : "admin"
   },
   {
+    "_id": 2,
     "firstName" : "Charlene",
     "lastName" : "Pham",
     "phoneNumber" : "415-310-1619",
@@ -14,6 +16,7 @@
     "role" : "regular"
   },
   {
+    "_id": 3,
     "firstName" : "Benson",
     "lastName" : "Mach",
     "phoneNumber" : "415-310-1619",
@@ -21,6 +24,7 @@
     "role" : "regular"
   },
   {
+    "_id": 4,
     "firstName" : "Dan",
     "lastName" : "Petrie",
     "phoneNumber" : "415-310-1619",
