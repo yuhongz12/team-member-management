@@ -11,7 +11,6 @@ const HomePage = () => {
 
             <div>
             <h1>Team members</h1>
-            {/*<button onClick={addMemberHandler}>Add</button>*/}
               <Link to={'/create'}>Add</Link>
             <p className={'text-muted'}>You have {memberArray.length} team members.</p>
             <MemberList/>

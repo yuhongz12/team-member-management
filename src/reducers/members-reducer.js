@@ -16,9 +16,14 @@ const membersSlice = createSlice({
                 ...action.payload,
                 _id: (new Date()).getTime()
             })
+        },
+        updateMember(state, action) {
+            const index = state.findIndex(m =>
+                m._id === action.payload._id);
+            state[index] = action.payload;
         }
     }
 });
 
 export default membersSlice.reducer;
-export const {createMember, deleteMember} = membersSlice.actions;
+export const {createMember, deleteMember, updateMember} = membersSlice.actions;

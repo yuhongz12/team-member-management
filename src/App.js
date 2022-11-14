@@ -6,6 +6,7 @@ import CreateMember from "./create-member";
 import {BrowserRouter, Link} from "react-router-dom";
 import HomePage from "./home";
 import {Routes, Route} from "react-router";
+import EditMember from "./edit-member";
 
 
 
@@ -17,7 +18,7 @@ function App() {
           <Routes>
             <Route path={'/*'} element={<HomePage/>}/>
             <Route path={'/create'} element={<CreateMember/>}/>
-            {/*<Route path={'/edit/:id'} element={<HomePage/>}/>*/}
+            <Route path={'/edit/:id'} element={<EditMember/>}/>
           </Routes>
         </div>
       </BrowserRouter>
