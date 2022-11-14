@@ -6,7 +6,7 @@ const MemberList = () => {
     const members = useSelector(state => state.members);
     return (
         <ul className={'list-group'}>
-            {members.map(member => <MemberItem member={member}/>)}
+            {members.map(member => <MemberItem key={member._id} member={member}/>)}
 
         </ul>
     )

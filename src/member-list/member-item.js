@@ -1,6 +1,4 @@
 import React from "react";
-import {Button} from "react-bootstrap";
-import {Link} from "react-router-dom";
 
 const MemberItem = ({
                         member = {
@@ -12,7 +10,6 @@ const MemberItem = ({
                         }
                     }
 ) => {
-    console.log(member);
     return(
         <li className={'list-group-item row'}>
             <div>

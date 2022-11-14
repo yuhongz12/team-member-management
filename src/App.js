@@ -2,35 +2,27 @@ import React from "react";
 import MemberList from "./member-list";
 import {useDispatch, useSelector} from "react-redux";
 import {createMember} from "./reducers/members-reducer";
+import CreateMember from "./create-member";
+import {BrowserRouter, Link} from "react-router-dom";
+import HomePage from "./home";
+import {Routes, Route} from "react-router";
 
 
 
 function App() {
 
-  const memberArray = useSelector(state => state.members);
-  const dispatch = useDispatch();
-  const addMemberHandler = () => {
-    const newMember = {
-      firstName: "bob",
-      lastName: "smith",
-      email: "bob@gmail.com",
-      phoneNumber: "131-123-1233",
-      role: "regular"
-    }
-    dispatch(createMember(newMember));
-    console.log()
-  }
-  return (
+  return(
+      <BrowserRouter>
+        <div className={'container'}>
+          <Routes>
+            <Route path={'/*'} element={<HomePage/>}/>
+            <Route path={'/create'} element={<CreateMember/>}/>
+            {/*<Route path={'/edit/:id'} element={<HomePage/>}/>*/}
+          </Routes>
+        </div>
+      </BrowserRouter>
 
-      <div className='container'>
-        <h1>Team members</h1>
-        <button onClick={addMemberHandler}>Add</button>
-        <p className={'text-muted'}>You have {memberArray.length} team members.</p>
-        <MemberList/>
-      </div>
-
-
-  );
+  )
 }
 
 export default App;
