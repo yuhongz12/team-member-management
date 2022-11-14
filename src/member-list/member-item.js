@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const MemberItem = ({
                         member = {
-                            '_id' : 123,
+                            '_id': 123,
                             'firstName': 'Adiren',
                             'lastName': 'Oiczak',
                             'phoneNumber': '415-310-1619',
@@ -12,7 +12,7 @@ const MemberItem = ({
                         }
                     }
 ) => {
-    return(
+    return (
         <Link to={'/edit/' + member._id}>
             <li className={'list-group-item row'}>
                 <div>

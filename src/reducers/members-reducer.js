@@ -8,7 +8,7 @@ const membersSlice = createSlice({
     reducers: {
         deleteMember(state, action) {
             const index = state.findIndex(m =>
-            m._id === action.payload);
+                m._id === action.payload);
             state.splice(index, 1);
         },
         createMember(state, action) {

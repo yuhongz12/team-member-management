@@ -6,21 +6,20 @@ import {Routes, Route} from "react-router";
 import EditMember from "./edit-member";
 
 
-
 function App() {
 
-  return(
-      <BrowserRouter>
-        <div className={'container'}>
-          <Routes>
-            <Route path={'/*'} element={<HomePage/>}/>
-            <Route path={'/create'} element={<CreateMember/>}/>
-            <Route path={'/edit/:id'} element={<EditMember/>}/>
-          </Routes>
-        </div>
-      </BrowserRouter>
+    return (
+        <BrowserRouter>
+            <div className={'container'}>
+                <Routes>
+                    <Route path={'/*'} element={<HomePage/>}/>
+                    <Route path={'/create'} element={<CreateMember/>}/>
+                    <Route path={'/edit/:id'} element={<EditMember/>}/>
+                </Routes>
+            </div>
+        </BrowserRouter>
 
-  )
+    )
 }
 
 export default App;
