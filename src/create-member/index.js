@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {createMember} from "../reducers/members-reducer";
-const CreateMember = (member) => {
+const CreateMember = () => {
     let [newFirstName, setNewFirstName] = useState('');
     let [newLastName, setNewLastName] = useState('');
     let [newEmail, setNewEmail] = useState('');

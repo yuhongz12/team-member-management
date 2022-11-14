@@ -1,6 +1,5 @@
 import React from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {createMember} from "../reducers/members-reducer";
+import {useSelector} from "react-redux";
 import MemberList from "../member-list";
 import {Link} from "react-router-dom";
 
