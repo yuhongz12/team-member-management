@@ -45,13 +45,17 @@ const CreateMember = () => {
 
                     <h4>Role</h4>
                     <div>
-                        <label htmlFor={'role-regular'} className={'form-check-label'}>Regular</label>
+                        <label htmlFor={'role-regular'} className={'form-check-label'}>
+                            Regular - Can't delete members
+                        </label>
                         <input id={'role-regular'} className={'form-check-input float-end'}
                                checked={newRole === "regular"} onChange={event => setNewRole(event.target.value)}
                                name={"role"} type="radio" value="regular"/>
                     </div>
                     <div>
-                        <label htmlFor={'role-admin'} className={'form-check-label'}>Admin</label>
+                        <label htmlFor={'role-admin'} className={'form-check-label'}>
+                            Admin - Can delete members
+                        </label>
                         <input id={'role-admin'} className={'form-check-input float-end'} checked={newRole === "admin"}
                                onChange={event => setNewRole(event.target.value)}
                                name={"role"} type="radio" value="admin"/>
