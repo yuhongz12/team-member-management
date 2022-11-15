@@ -35,40 +35,53 @@ const EditMember = () => {
 
     return (
         <div>
-            <Link to={'/'}>Back</Link>
+            <Link className={'float-end fs-1'} to={'/'}><i className="bi bi-x-lg"></i></Link>
             <h1>Edit a team member</h1>
             <p className={'text-muted'}>Edit contact info, location, and role.</p>
 
-            <div>
-                <h4>Info</h4>
-                <input placeholder={'First Name'} value={newFirstName}
-                       onChange={event => setNewFirstName(event.target.value)}
-                       type="text" name="firstName"/><br/>
-                <input placeholder={'Last Name'} value={newLastName}
-                       onChange={event => setNewLastName(event.target.value)}
-                       type="text" name="firstName"/><br/>
-                <input placeholder={'Email'} value={newEmail} onChange={event => setNewEmail(event.target.value)}
-                       type="text" name="email"/><br/>
-                <input placeholder={'Phone'} value={newPhone} onChange={event => setNewPhone(event.target.value)}
-                       type="text" name="phoneNumber"/><br/>
+            <div className={'d-flex justify-content-center'}>
+                <div className={'w-50'}>
+                    <h4>Info</h4>
+                    <input className={'w-100 form-control'} placeholder={'First Name'} value={newFirstName}
+                           onChange={event => setNewFirstName(event.target.value)}
+                           type="text" name="firstName"/><br/>
+                    <input className={'w-100 form-control'} placeholder={'Last Name'} value={newLastName}
+                           onChange={event => setNewLastName(event.target.value)}
+                           type="text" name="firstName"/><br/>
+                    <input className={'w-100 form-control'} placeholder={'Email'} value={newEmail}
+                           onChange={event => setNewEmail(event.target.value)}
+                           type="email" name="email"/><br/>
+                    <input className={'w-100 form-control'} placeholder={'Phone'} value={newPhone}
+                           onChange={event => setNewPhone(event.target.value)}
+                           type="text" name="phoneNumber"/><br/>
 
-                <h4>Role</h4>
-                <div>
-                    <label>
-                        Regular
-                        <input checked={newRole === "regular"} onChange={event => setNewRole(event.target.value)}
+                    <h4>Role</h4>
+                    <div>
+                        <label htmlFor={'role-regular'} className={'form-check-label'}>Regular</label>
+                        <input id={'role-regular'} className={'form-check-input float-end'}
+                               checked={newRole === "regular"}
+                               onChange={event => setNewRole(event.target.value)}
                                name={"role"} type="radio" value="regular"/>
-
-                    </label><br/>
-                    <label>
-                        Admin
-                        <input checked={newRole === "admin"} onChange={event => setNewRole(event.target.value)}
+                    </div>
+                    <div>
+                        <label htmlFor={'role-admin'} className={'form-check-label'}>Admin</label>
+                        <input id={'role-admin'} className={'form-check-input float-end'} checked={newRole === "admin"}
+                               onChange={event => setNewRole(event.target.value)}
                                name={"role"} type="radio" value="admin"/>
-                    </label>
+
+
+                    </div>
+
+                    <div className={'d-flex justify-content-between mt-5'}>
+                        <Link className={'btn btn-danger'} to={'/'} onClick={deleteMemberHandler}> Delete</Link>
+                        <Link className={'btn btn-primary'} to={'/'} onClick={updateMemberHandler}> Update</Link>
+                    </div>
                 </div>
+
+
             </div>
-            <Link to={'/'} onClick={deleteMemberHandler}> Delete</Link>
-            <Link to={'/'} onClick={updateMemberHandler}> Update</Link>
+
+
         </div>
     );
 }

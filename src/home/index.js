@@ -7,10 +7,9 @@ const HomePage = () => {
     const memberArray = useSelector(state => state.members);
 
     return (
-
         <div>
+            <Link className={'float-end fs-1'} to={'/create'}><i className="bi bi-plus-lg"></i></Link>
             <h1>Team members</h1>
-            <Link to={'/create'}>Add</Link>
             <p className={'text-muted'}>You have {memberArray.length} team members.</p>
             <MemberList/>
         </div>

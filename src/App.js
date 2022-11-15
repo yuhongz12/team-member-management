@@ -10,7 +10,7 @@ function App() {
 
     return (
         <BrowserRouter>
-            <div className={'container'}>
+            <div className={'container mt-2'}>
                 <Routes>
                     <Route path={'/*'} element={<HomePage/>}/>
                     <Route path={'/create'} element={<CreateMember/>}/>

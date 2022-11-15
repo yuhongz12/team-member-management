@@ -13,12 +13,13 @@ const MemberItem = ({
                     }
 ) => {
     return (
-        <Link to={'/edit/' + member._id}>
+        <Link to={'/edit/' + member._id} style={{textDecoration: 'none'}}>
             <li className={'list-group-item row'}>
                 <div>
-                    <h4>{member.firstName} {member.lastName} {member.role === 'admin' && '[admin]'}</h4>
-                    <p>{member.phoneNumber}</p>
-                    <p>{member.email}</p>
+                    <h4>{member.firstName} {member.lastName} <span
+                        className="badge bg-secondary">{member.role === 'admin' && 'Admin'}</span></h4>
+                    <p className={'m-0 text-muted'}>{member.phoneNumber}</p>
+                    <p className={'m-0 text-muted'}>{member.email}</p>
                 </div>
             </li>
         </Link>
